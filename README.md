@@ -1,12 +1,12 @@
-# Testing Pufferfish for the task of training MLP on MNIST dataset
+# Testing Pufferfish on the task of training MLP on MNIST dataset
 
 Author: Lukasz Sliwinski s1640204@ed.ac.uk
 
-As a part of assessment for Deep Learing on Manifolds module Spring 2024
+As a part of assessment for Deep Learing on Manifolds module Spring 2024.
 
 ### What has been done
 
-In this directory, I have implemented the Pufferfish algorithm on the task of training MLP on the MNIST dataset. Description of the files:
+In this directory, I have implemented the [Pufferfish](https://proceedings.mlsys.org/paper_files/paper/2021/hash/94cb28874a503f34b3c4a41bddcea2bd-Abstract.html) algorithm on the task of training MLP on the MNIST dataset. Description of the files:
 
 - models.py - contains implementation of full rank mlp, low rank mlp together with implementation of a low rank layer, and the implementation of conversion from full rank network to low rank network. Below is a code that converts a single linear layer to a low rank layer
 
@@ -52,7 +52,7 @@ The DDP training was executed on MAC-MIGS GPU cluster which provides 4 x T600 NV
 
 ## Time savings and accuracy for small model
 
-The small full rank model is:
+The small full rank model was:
 ```bash
 2024-04-19 14:51:43,888 - __mp_main__ - INFO - FullRankNet(
   (input_layer): Linear(in_features=784, out_features=128, bias=True)
@@ -63,7 +63,7 @@ The small full rank model is:
 )
 ```
 
-That is apart from input dimension with 28x28 and output dimension 10, hidden_dimension was 128.
+That is apart from input dimension with 28x28 and output dimension 10, hidden_dimension was 128. There were 4 hidden layers.
 
 The corresponding low rank model was:
 ```bash
@@ -97,59 +97,82 @@ Accuracy:
   
 Mean time per epoch:
 
-- full rank model: 
-- low rank model:
+- full rank model: ~6.4s
+- low rank model: ~6.4s (no non-negligible time saving)
 
 The mean times were computed across three runs.
+
+We can see that mean time per epoch was almost the same for both models.
 
 ## Time savings and accuracy for large model
 
-The small full rank model is:
+The large full rank model was:
 ```bash
-2024-04-19 14:51:43,888 - __mp_main__ - INFO - FullRankNet(
-  (input_layer): Linear(in_features=784, out_features=128, bias=True)
+2024-04-19 15:15:41,214 - __mp_main__ - INFO - FullRankNet(
+  (input_layer): Linear(in_features=784, out_features=512, bias=True)
   (hidden_layers): ModuleList(
-    (0-3): 4 x Linear(in_features=128, out_features=128, bias=True)
+    (0-7): 8 x Linear(in_features=512, out_features=512, bias=True)
   )
-  (output_layer): Linear(in_features=128, out_features=10, bias=True)
+  (output_layer): Linear(in_features=512, out_features=10, bias=True)
 )
 ```
 
-That is apart from input dimension with 28x28 and output dimension 10, hidden_dimension was 128.
+That is apart from input dimension with 28x28 and output dimension 10, hidden_dimension was 512. There were 8 hidden layers.
 
 The corresponding low rank model was:
 ```bash
-2024-04-19 14:33:47,435 - __mp_main__ - INFO - LowRankNet(
-  (input_layer): Linear(in_features=784, out_features=128, bias=True)
+2024-04-19 15:18:10,928 - __mp_main__ - INFO - LowRankNet(
+  (input_layer): Linear(in_features=784, out_features=512, bias=True)
   (hidden_layers): ModuleList(
-    (0-3): 4 x LowRankLayer(
-      (u_layer): Linear(in_features=128, out_features=16, bias=False)
-      (v_layer): Linear(in_features=16, out_features=128, bias=True)
+    (0-7): 8 x LowRankLayer(
+      (u_layer): Linear(in_features=512, out_features=64, bias=False)
+      (v_layer): Linear(in_features=64, out_features=512, bias=True)
     )
   )
-  (output_layer): Linear(in_features=128, out_features=10, bias=True)
+  (output_layer): Linear(in_features=512, out_features=10, bias=True)
 )
 ```
-Only the inner linear layers were rendered low rank and the low rank dimenion was 16.
+Only the inner linear layers were rendered low rank and the low rank dimenion was 64.
 
 #### Number of parameters
 
-The full rank model had 167818 parameters while the low rank model had 118666 parameters which is around 30\% less.
+The full rank model had 2508298 parameters while the low rank model had 935434 parameters which is around 63\% less.
 
 #### Training
 
-The models were trained for 30 epochs using Adam optimiser and learning rate 0.001 reduced 10 times every 10 epochs. The best validation accuracy model was used to compute the final accuracy on a test set.
+The models were trained for 3 epochs using Adam optimiser and learning rate 0.001 reduced 10 times every 10 epochs. 
 
-#### Final accuracy and mean epoch time
+Naturally, the models were not fully trained. The purpose of the experiments was to calculate and compare the mean time per epoch.
 
-Accuracy:
-
-- full rank model: 0.978
-- low rank model: 0.9727
+#### Mean epoch time
   
 Mean time per epoch:
 
-- full rank model: 
-- low rank model:
+- full rank model: ~12.2s
+- low rank model: ~8.5s (3.7s saving - around 30\% less)
 
 The mean times were computed across three runs.
+
+## Discussion
+
+The main conclusion based on the results is that Pufferfish does not always provide time savings.
+
+Because low rank decomposition of a linear layer extends the computational graph of the network, less parameters of the network does not necesarily imply less computation.
+
+In the case of the small model, although the low rank network had 30\% less parameters than the full rank network, the additional computation time due to higher number of layers reduced any time savings from having a decreased number of parameters (that is, savings from reduced communication overhead and less gradients to be computed).
+
+In the case of the large model, the low rank network has over 60\% less parameters than the full rank network. Consequently, this results in reduction of mean time per epoch by around 30\%.
+
+We can thus conclude that low-rank decomposition of linear layers does not always lead to a decrease in the training time of the network. Only when the relative difference in the number of parameters between the full rank and the low rank model is large, it is possible to obtain positive reduction in computation time.
+
+#### Other considerations
+
+As mentioned in the executive summary, in addition to the problem above, we are faced with hyperparameter optimisation for the number of warm-up epochs and the number of layers to be decomposed.
+
+Furthermore, the low rank representation does poorly in terms of decreasing the total number of operations which is an important performance metric as it determines the inference efficiency of the model.
+
+All of above makes the application of direct low rank training and thus Pufferfish a complicated task.
+
+##### Addendum
+
+While I wrote the code myself, I naturally read through the code repository correponding to the paper available at [https://github.com/hwang595/Pufferfish](https://github.com/hwang595/Pufferfish).

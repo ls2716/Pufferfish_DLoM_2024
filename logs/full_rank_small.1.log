@@ -1,0 +1,529 @@
+2024-04-19 14:38:37,494 - evaluate_full - INFO - Using device cuda
+2024-04-19 14:38:37,495 - __main__ - INFO - Using device cuda
+2024-04-19 14:38:39,458 - evaluate_full - INFO - Using device cuda
+2024-04-19 14:38:39,458 - __mp_main__ - INFO - Using device cuda
+2024-04-19 14:38:39,532 - evaluate_full - INFO - Using device cuda
+2024-04-19 14:38:39,532 - __mp_main__ - INFO - Using device cuda
+2024-04-19 14:38:39,547 - evaluate_full - INFO - Using device cuda
+2024-04-19 14:38:39,547 - __mp_main__ - INFO - Using device cuda
+2024-04-19 14:38:39,551 - evaluate_full - INFO - Using device cuda
+2024-04-19 14:38:39,552 - __mp_main__ - INFO - Using device cuda
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Rank 0 started
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Rank 1 started
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Downloading the MNIST dataset
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Downloading the MNIST dataset
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Rank 2 started
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Downloading the MNIST dataset
+2024-04-19 14:38:40,488 - __mp_main__ - INFO - Rank 3 started
+2024-04-19 14:38:40,489 - __mp_main__ - INFO - Downloading the MNIST dataset
+2024-04-19 14:38:41,026 - __mp_main__ - INFO - FullRankNet(
+  (input_layer): Linear(in_features=784, out_features=128, bias=True)
+  (hidden_layers): ModuleList(
+    (0-3): 4 x Linear(in_features=128, out_features=128, bias=True)
+  )
+  (output_layer): Linear(in_features=128, out_features=10, bias=True)
+)
+2024-04-19 14:38:41,026 - __mp_main__ - INFO - Rank 0: Number of model parameters 167818
+2024-04-19 14:38:41,198 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:38:41,437 - __mp_main__ - INFO - Epoch 0, Loss 2.2998790740966797
+2024-04-19 14:38:41,439 - __mp_main__ - INFO - Epoch 0, Loss 2.3051164150238037
+2024-04-19 14:38:41,446 - __mp_main__ - INFO - Epoch 0, Loss 2.3008673191070557
+2024-04-19 14:38:41,447 - __mp_main__ - INFO - Epoch 0, Loss 2.288210868835449
+2024-04-19 14:38:44,340 - __mp_main__ - INFO - Epoch 0, Loss 0.4153969883918762
+2024-04-19 14:38:44,340 - __mp_main__ - INFO - Epoch 0, Loss 0.4721580445766449
+2024-04-19 14:38:44,340 - __mp_main__ - INFO - Epoch 0, Loss 0.23889721930027008
+2024-04-19 14:38:44,341 - __mp_main__ - INFO - Epoch 0, Loss 0.7751072645187378
+2024-04-19 14:38:47,423 - __mp_main__ - INFO - Epoch 0, Loss 0.6539318561553955
+2024-04-19 14:38:47,424 - __mp_main__ - INFO - Epoch 0, Loss 0.3899964988231659
+2024-04-19 14:38:47,424 - __mp_main__ - INFO - Epoch 0, Loss 0.32287439703941345
+2024-04-19 14:38:47,425 - __mp_main__ - INFO - Epoch 0, Loss 0.5685696601867676
+2024-04-19 14:38:48,544 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:38:48,544 - __mp_main__ - INFO - Rank 0: Time taken for epoch 0 is 7.346236944198608
+2024-04-19 14:38:49,531 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.8798
+2024-04-19 14:38:49,532 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:38:49,538 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:38:49,573 - __mp_main__ - INFO - Epoch 1, Loss 0.12200785428285599
+2024-04-19 14:38:49,573 - __mp_main__ - INFO - Epoch 1, Loss 0.7789322137832642
+2024-04-19 14:38:49,573 - __mp_main__ - INFO - Epoch 1, Loss 0.3262524902820587
+2024-04-19 14:38:49,576 - __mp_main__ - INFO - Epoch 1, Loss 0.35625219345092773
+2024-04-19 14:38:52,671 - __mp_main__ - INFO - Epoch 1, Loss 0.26440781354904175
+2024-04-19 14:38:52,671 - __mp_main__ - INFO - Epoch 1, Loss 0.08801642060279846
+2024-04-19 14:38:52,671 - __mp_main__ - INFO - Epoch 1, Loss 0.2615509331226349
+2024-04-19 14:38:52,671 - __mp_main__ - INFO - Epoch 1, Loss 0.5656017065048218
+2024-04-19 14:38:55,576 - __mp_main__ - INFO - Epoch 1, Loss 0.3794219195842743
+2024-04-19 14:38:55,577 - __mp_main__ - INFO - Epoch 1, Loss 0.05706005543470383
+2024-04-19 14:38:55,577 - __mp_main__ - INFO - Epoch 1, Loss 0.15357060730457306
+2024-04-19 14:38:55,577 - __mp_main__ - INFO - Epoch 1, Loss 0.35444873571395874
+2024-04-19 14:38:56,558 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:38:56,558 - __mp_main__ - INFO - Rank 0: Time taken for epoch 1 is 7.0202860832214355
+2024-04-19 14:38:57,526 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9256
+2024-04-19 14:38:57,526 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:38:57,532 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:38:57,556 - __mp_main__ - INFO - Epoch 2, Loss 0.023935306817293167
+2024-04-19 14:38:57,556 - __mp_main__ - INFO - Epoch 2, Loss 0.6484091281890869
+2024-04-19 14:38:57,556 - __mp_main__ - INFO - Epoch 2, Loss 0.09743371605873108
+2024-04-19 14:38:57,557 - __mp_main__ - INFO - Epoch 2, Loss 0.20616856217384338
+2024-04-19 14:39:00,509 - __mp_main__ - INFO - Epoch 2, Loss 0.07367506623268127
+2024-04-19 14:39:00,509 - __mp_main__ - INFO - Epoch 2, Loss 0.18304531276226044
+2024-04-19 14:39:00,510 - __mp_main__ - INFO - Epoch 2, Loss 0.49166229367256165
+2024-04-19 14:39:00,510 - __mp_main__ - INFO - Epoch 2, Loss 0.23752659559249878
+2024-04-19 14:39:03,511 - __mp_main__ - INFO - Epoch 2, Loss 0.019818151369690895
+2024-04-19 14:39:03,511 - __mp_main__ - INFO - Epoch 2, Loss 0.05746408924460411
+2024-04-19 14:39:03,511 - __mp_main__ - INFO - Epoch 2, Loss 0.3016355037689209
+2024-04-19 14:39:03,512 - __mp_main__ - INFO - Epoch 2, Loss 0.3662780225276947
+2024-04-19 14:39:04,520 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:04,521 - __mp_main__ - INFO - Rank 0: Time taken for epoch 2 is 6.988838195800781
+2024-04-19 14:39:05,487 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9442
+2024-04-19 14:39:05,487 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:39:05,492 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:05,514 - __mp_main__ - INFO - Epoch 3, Loss 0.012749476358294487
+2024-04-19 14:39:05,514 - __mp_main__ - INFO - Epoch 3, Loss 0.06172499805688858
+2024-04-19 14:39:05,514 - __mp_main__ - INFO - Epoch 3, Loss 0.5530206561088562
+2024-04-19 14:39:05,515 - __mp_main__ - INFO - Epoch 3, Loss 0.15748722851276398
+2024-04-19 14:39:08,515 - __mp_main__ - INFO - Epoch 3, Loss 0.08556026965379715
+2024-04-19 14:39:08,515 - __mp_main__ - INFO - Epoch 3, Loss 0.15360811352729797
+2024-04-19 14:39:08,515 - __mp_main__ - INFO - Epoch 3, Loss 0.4598442316055298
+2024-04-19 14:39:08,516 - __mp_main__ - INFO - Epoch 3, Loss 0.20687060058116913
+2024-04-19 14:39:11,661 - __mp_main__ - INFO - Epoch 3, Loss 0.021978335455060005
+2024-04-19 14:39:11,662 - __mp_main__ - INFO - Epoch 3, Loss 0.20882795751094818
+2024-04-19 14:39:11,662 - __mp_main__ - INFO - Epoch 3, Loss 0.055319566279649734
+2024-04-19 14:39:11,663 - __mp_main__ - INFO - Epoch 3, Loss 0.24693267047405243
+2024-04-19 14:39:12,653 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:12,653 - __mp_main__ - INFO - Rank 0: Time taken for epoch 3 is 7.161449909210205
+2024-04-19 14:39:13,611 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9394
+2024-04-19 14:39:13,611 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:13,635 - __mp_main__ - INFO - Epoch 4, Loss 0.013636050745844841
+2024-04-19 14:39:13,636 - __mp_main__ - INFO - Epoch 4, Loss 0.04564543813467026
+2024-04-19 14:39:13,636 - __mp_main__ - INFO - Epoch 4, Loss 0.6603342294692993
+2024-04-19 14:39:13,637 - __mp_main__ - INFO - Epoch 4, Loss 0.1352207511663437
+2024-04-19 14:39:16,669 - __mp_main__ - INFO - Epoch 4, Loss 0.40725943446159363
+2024-04-19 14:39:16,669 - __mp_main__ - INFO - Epoch 4, Loss 0.15111927688121796
+2024-04-19 14:39:16,669 - __mp_main__ - INFO - Epoch 4, Loss 0.07551147788763046
+2024-04-19 14:39:16,669 - __mp_main__ - INFO - Epoch 4, Loss 0.1942765712738037
+2024-04-19 14:39:19,838 - __mp_main__ - INFO - Epoch 4, Loss 0.02109578065574169
+2024-04-19 14:39:19,838 - __mp_main__ - INFO - Epoch 4, Loss 0.17895184457302094
+2024-04-19 14:39:19,838 - __mp_main__ - INFO - Epoch 4, Loss 0.212659552693367
+2024-04-19 14:39:19,839 - __mp_main__ - INFO - Epoch 4, Loss 0.020046545192599297
+2024-04-19 14:39:20,978 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:20,978 - __mp_main__ - INFO - Rank 0: Time taken for epoch 4 is 7.367073059082031
+2024-04-19 14:39:21,922 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.958
+2024-04-19 14:39:21,922 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:39:21,926 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:21,950 - __mp_main__ - INFO - Epoch 5, Loss 0.005496698431670666
+2024-04-19 14:39:21,950 - __mp_main__ - INFO - Epoch 5, Loss 0.47560083866119385
+2024-04-19 14:39:21,950 - __mp_main__ - INFO - Epoch 5, Loss 0.01624704711139202
+2024-04-19 14:39:21,951 - __mp_main__ - INFO - Epoch 5, Loss 0.05985383316874504
+2024-04-19 14:39:25,362 - __mp_main__ - INFO - Epoch 5, Loss 0.059571538120508194
+2024-04-19 14:39:25,362 - __mp_main__ - INFO - Epoch 5, Loss 0.149710014462471
+2024-04-19 14:39:25,362 - __mp_main__ - INFO - Epoch 5, Loss 0.31489676237106323
+2024-04-19 14:39:25,363 - __mp_main__ - INFO - Epoch 5, Loss 0.1649336963891983
+2024-04-19 14:39:28,670 - __mp_main__ - INFO - Epoch 5, Loss 0.16571377217769623
+2024-04-19 14:39:28,670 - __mp_main__ - INFO - Epoch 5, Loss 0.018322499468922615
+2024-04-19 14:39:28,671 - __mp_main__ - INFO - Epoch 5, Loss 0.014718146063387394
+2024-04-19 14:39:28,671 - __mp_main__ - INFO - Epoch 5, Loss 0.18745720386505127
+2024-04-19 14:39:29,650 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:29,650 - __mp_main__ - INFO - Rank 0: Time taken for epoch 5 is 7.723968029022217
+2024-04-19 14:39:30,600 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9626
+2024-04-19 14:39:30,600 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:39:30,603 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:30,626 - __mp_main__ - INFO - Epoch 6, Loss 0.44035398960113525
+2024-04-19 14:39:30,626 - __mp_main__ - INFO - Epoch 6, Loss 0.007239753846079111
+2024-04-19 14:39:30,626 - __mp_main__ - INFO - Epoch 6, Loss 0.004734295420348644
+2024-04-19 14:39:30,626 - __mp_main__ - INFO - Epoch 6, Loss 0.04912703111767769
+2024-04-19 14:39:33,982 - __mp_main__ - INFO - Epoch 6, Loss 0.16124238073825836
+2024-04-19 14:39:33,982 - __mp_main__ - INFO - Epoch 6, Loss 0.23342101275920868
+2024-04-19 14:39:33,983 - __mp_main__ - INFO - Epoch 6, Loss 0.1300455927848816
+2024-04-19 14:39:33,984 - __mp_main__ - INFO - Epoch 6, Loss 0.03647005185484886
+2024-04-19 14:39:37,254 - __mp_main__ - INFO - Epoch 6, Loss 0.16523315012454987
+2024-04-19 14:39:37,254 - __mp_main__ - INFO - Epoch 6, Loss 0.15210649371147156
+2024-04-19 14:39:37,254 - __mp_main__ - INFO - Epoch 6, Loss 0.008958930149674416
+2024-04-19 14:39:37,255 - __mp_main__ - INFO - Epoch 6, Loss 0.01622205413877964
+2024-04-19 14:39:38,442 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:38,442 - __mp_main__ - INFO - Rank 0: Time taken for epoch 6 is 7.838817358016968
+2024-04-19 14:39:39,377 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9648
+2024-04-19 14:39:39,377 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:39:39,381 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:39,408 - __mp_main__ - INFO - Epoch 7, Loss 0.003876347094774246
+2024-04-19 14:39:39,408 - __mp_main__ - INFO - Epoch 7, Loss 0.006256315391510725
+2024-04-19 14:39:39,408 - __mp_main__ - INFO - Epoch 7, Loss 0.4568747580051422
+2024-04-19 14:39:39,409 - __mp_main__ - INFO - Epoch 7, Loss 0.04448744282126427
+2024-04-19 14:39:42,422 - __mp_main__ - INFO - Epoch 7, Loss 0.0505514070391655
+2024-04-19 14:39:42,423 - __mp_main__ - INFO - Epoch 7, Loss 0.16354690492153168
+2024-04-19 14:39:42,423 - __mp_main__ - INFO - Epoch 7, Loss 0.09126099944114685
+2024-04-19 14:39:42,423 - __mp_main__ - INFO - Epoch 7, Loss 0.11471480131149292
+2024-04-19 14:39:45,447 - __mp_main__ - INFO - Epoch 7, Loss 0.14311575889587402
+2024-04-19 14:39:45,447 - __mp_main__ - INFO - Epoch 7, Loss 0.011358982883393764
+2024-04-19 14:39:45,447 - __mp_main__ - INFO - Epoch 7, Loss 0.00779994111508131
+2024-04-19 14:39:45,447 - __mp_main__ - INFO - Epoch 7, Loss 0.1827852576971054
+2024-04-19 14:39:46,378 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:46,378 - __mp_main__ - INFO - Rank 0: Time taken for epoch 7 is 6.997238636016846
+2024-04-19 14:39:47,321 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9664
+2024-04-19 14:39:47,321 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:39:47,325 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:47,350 - __mp_main__ - INFO - Epoch 8, Loss 0.0009769137250259519
+2024-04-19 14:39:47,350 - __mp_main__ - INFO - Epoch 8, Loss 0.4184921681880951
+2024-04-19 14:39:47,350 - __mp_main__ - INFO - Epoch 8, Loss 0.0053576757200062275
+2024-04-19 14:39:47,350 - __mp_main__ - INFO - Epoch 8, Loss 0.026102080941200256
+2024-04-19 14:39:50,601 - __mp_main__ - INFO - Epoch 8, Loss 0.05386634171009064
+2024-04-19 14:39:50,601 - __mp_main__ - INFO - Epoch 8, Loss 0.11645909398794174
+2024-04-19 14:39:50,601 - __mp_main__ - INFO - Epoch 8, Loss 0.12074374407529831
+2024-04-19 14:39:50,602 - __mp_main__ - INFO - Epoch 8, Loss 0.19209298491477966
+2024-04-19 14:39:53,258 - __mp_main__ - INFO - Epoch 8, Loss 0.1744900643825531
+2024-04-19 14:39:53,258 - __mp_main__ - INFO - Epoch 8, Loss 0.009245342575013638
+2024-04-19 14:39:53,258 - __mp_main__ - INFO - Epoch 8, Loss 0.0032503707334399223
+2024-04-19 14:39:53,259 - __mp_main__ - INFO - Epoch 8, Loss 0.22457905113697052
+2024-04-19 14:39:54,147 - __mp_main__ - INFO - Rank 0: Learning rate [0.001]
+2024-04-19 14:39:54,147 - __mp_main__ - INFO - Rank 0: Time taken for epoch 8 is 6.821376085281372
+2024-04-19 14:39:55,084 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.968
+2024-04-19 14:39:55,084 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:39:55,089 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:39:55,110 - __mp_main__ - INFO - Epoch 9, Loss 0.3665007948875427
+2024-04-19 14:39:55,110 - __mp_main__ - INFO - Epoch 9, Loss 0.008057239465415478
+2024-04-19 14:39:55,110 - __mp_main__ - INFO - Epoch 9, Loss 0.0007310410146601498
+2024-04-19 14:39:55,111 - __mp_main__ - INFO - Epoch 9, Loss 0.017534514889121056
+2024-04-19 14:39:57,838 - __mp_main__ - INFO - Epoch 9, Loss 0.10897764563560486
+2024-04-19 14:39:57,838 - __mp_main__ - INFO - Epoch 9, Loss 0.06512507051229477
+2024-04-19 14:39:57,838 - __mp_main__ - INFO - Epoch 9, Loss 0.072222501039505
+2024-04-19 14:39:57,838 - __mp_main__ - INFO - Epoch 9, Loss 0.1418747901916504
+2024-04-19 14:40:00,519 - __mp_main__ - INFO - Epoch 9, Loss 0.05892458185553551
+2024-04-19 14:40:00,519 - __mp_main__ - INFO - Epoch 9, Loss 0.004851555451750755
+2024-04-19 14:40:00,519 - __mp_main__ - INFO - Epoch 9, Loss 0.1761261373758316
+2024-04-19 14:40:00,519 - __mp_main__ - INFO - Epoch 9, Loss 0.1827865093946457
+2024-04-19 14:40:01,464 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:01,465 - __mp_main__ - INFO - Rank 0: Time taken for epoch 9 is 6.3759446144104
+2024-04-19 14:40:02,431 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9646
+2024-04-19 14:40:02,431 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:02,453 - __mp_main__ - INFO - Epoch 10, Loss 0.30754104256629944
+2024-04-19 14:40:02,453 - __mp_main__ - INFO - Epoch 10, Loss 0.0007422980270348489
+2024-04-19 14:40:02,453 - __mp_main__ - INFO - Epoch 10, Loss 0.018286114558577538
+2024-04-19 14:40:02,453 - __mp_main__ - INFO - Epoch 10, Loss 0.003607480088248849
+2024-04-19 14:40:05,136 - __mp_main__ - INFO - Epoch 10, Loss 0.0104692243039608
+2024-04-19 14:40:05,136 - __mp_main__ - INFO - Epoch 10, Loss 0.043284762650728226
+2024-04-19 14:40:05,136 - __mp_main__ - INFO - Epoch 10, Loss 0.12599727511405945
+2024-04-19 14:40:05,136 - __mp_main__ - INFO - Epoch 10, Loss 0.1328762322664261
+2024-04-19 14:40:07,890 - __mp_main__ - INFO - Epoch 10, Loss 0.118958979845047
+2024-04-19 14:40:07,891 - __mp_main__ - INFO - Epoch 10, Loss 0.0031602864619344473
+2024-04-19 14:40:07,891 - __mp_main__ - INFO - Epoch 10, Loss 0.21818847954273224
+2024-04-19 14:40:07,892 - __mp_main__ - INFO - Epoch 10, Loss 0.001581304706633091
+2024-04-19 14:40:08,737 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:08,737 - __mp_main__ - INFO - Rank 0: Time taken for epoch 10 is 6.306040287017822
+2024-04-19 14:40:09,707 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9758
+2024-04-19 14:40:09,707 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:40:09,710 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:09,736 - __mp_main__ - INFO - Epoch 11, Loss 0.006216268055140972
+2024-04-19 14:40:09,736 - __mp_main__ - INFO - Epoch 11, Loss 0.2771444618701935
+2024-04-19 14:40:09,736 - __mp_main__ - INFO - Epoch 11, Loss 0.0034024727065116167
+2024-04-19 14:40:09,737 - __mp_main__ - INFO - Epoch 11, Loss 0.013700984418392181
+2024-04-19 14:40:12,840 - __mp_main__ - INFO - Epoch 11, Loss 0.031159617006778717
+2024-04-19 14:40:12,840 - __mp_main__ - INFO - Epoch 11, Loss 0.12312307953834534
+2024-04-19 14:40:12,840 - __mp_main__ - INFO - Epoch 11, Loss 0.011633475311100483
+2024-04-19 14:40:12,840 - __mp_main__ - INFO - Epoch 11, Loss 0.1262967586517334
+2024-04-19 14:40:15,854 - __mp_main__ - INFO - Epoch 11, Loss 0.003322817152366042
+2024-04-19 14:40:15,854 - __mp_main__ - INFO - Epoch 11, Loss 0.11137951165437698
+2024-04-19 14:40:15,855 - __mp_main__ - INFO - Epoch 11, Loss 0.0015122145414352417
+2024-04-19 14:40:15,855 - __mp_main__ - INFO - Epoch 11, Loss 0.20555157959461212
+2024-04-19 14:40:16,918 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:16,919 - __mp_main__ - INFO - Rank 0: Time taken for epoch 11 is 7.208750486373901
+2024-04-19 14:40:17,863 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9758
+2024-04-19 14:40:17,863 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:17,884 - __mp_main__ - INFO - Epoch 12, Loss 0.26461663842201233
+2024-04-19 14:40:17,884 - __mp_main__ - INFO - Epoch 12, Loss 0.006597980856895447
+2024-04-19 14:40:17,884 - __mp_main__ - INFO - Epoch 12, Loss 0.003198800841346383
+2024-04-19 14:40:17,885 - __mp_main__ - INFO - Epoch 12, Loss 0.01373065635561943
+2024-04-19 14:40:20,980 - __mp_main__ - INFO - Epoch 12, Loss 0.012301798909902573
+2024-04-19 14:40:20,980 - __mp_main__ - INFO - Epoch 12, Loss 0.1186634749174118
+2024-04-19 14:40:20,980 - __mp_main__ - INFO - Epoch 12, Loss 0.02627110853791237
+2024-04-19 14:40:20,981 - __mp_main__ - INFO - Epoch 12, Loss 0.12674088776111603
+2024-04-19 14:40:23,834 - __mp_main__ - INFO - Epoch 12, Loss 0.0034729272592812777
+2024-04-19 14:40:23,834 - __mp_main__ - INFO - Epoch 12, Loss 0.0013984133256599307
+2024-04-19 14:40:23,834 - __mp_main__ - INFO - Epoch 12, Loss 0.19936436414718628
+2024-04-19 14:40:23,835 - __mp_main__ - INFO - Epoch 12, Loss 0.1093883216381073
+2024-04-19 14:40:24,843 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:24,843 - __mp_main__ - INFO - Rank 0: Time taken for epoch 12 is 6.979974269866943
+2024-04-19 14:40:25,804 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9756
+2024-04-19 14:40:25,804 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:25,825 - __mp_main__ - INFO - Epoch 13, Loss 0.25011691451072693
+2024-04-19 14:40:25,825 - __mp_main__ - INFO - Epoch 13, Loss 0.003034947207197547
+2024-04-19 14:40:25,826 - __mp_main__ - INFO - Epoch 13, Loss 0.006520919036120176
+2024-04-19 14:40:25,827 - __mp_main__ - INFO - Epoch 13, Loss 0.013148179277777672
+2024-04-19 14:40:28,996 - __mp_main__ - INFO - Epoch 13, Loss 0.12387730926275253
+2024-04-19 14:40:28,996 - __mp_main__ - INFO - Epoch 13, Loss 0.01346708182245493
+2024-04-19 14:40:28,996 - __mp_main__ - INFO - Epoch 13, Loss 0.1205717921257019
+2024-04-19 14:40:28,997 - __mp_main__ - INFO - Epoch 13, Loss 0.02234189212322235
+2024-04-19 14:40:32,091 - __mp_main__ - INFO - Epoch 13, Loss 0.107047900557518
+2024-04-19 14:40:32,091 - __mp_main__ - INFO - Epoch 13, Loss 0.0036680714692920446
+2024-04-19 14:40:32,091 - __mp_main__ - INFO - Epoch 13, Loss 0.0013301203725859523
+2024-04-19 14:40:32,091 - __mp_main__ - INFO - Epoch 13, Loss 0.1959526240825653
+2024-04-19 14:40:33,146 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:33,146 - __mp_main__ - INFO - Rank 0: Time taken for epoch 13 is 7.342292070388794
+2024-04-19 14:40:34,112 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.976
+2024-04-19 14:40:34,112 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:40:34,116 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:34,140 - __mp_main__ - INFO - Epoch 14, Loss 0.0060153380036354065
+2024-04-19 14:40:34,140 - __mp_main__ - INFO - Epoch 14, Loss 0.002947843400761485
+2024-04-19 14:40:34,140 - __mp_main__ - INFO - Epoch 14, Loss 0.24091899394989014
+2024-04-19 14:40:34,141 - __mp_main__ - INFO - Epoch 14, Loss 0.014064035378396511
+2024-04-19 14:40:37,250 - __mp_main__ - INFO - Epoch 14, Loss 0.11946370452642441
+2024-04-19 14:40:37,250 - __mp_main__ - INFO - Epoch 14, Loss 0.12048088759183884
+2024-04-19 14:40:37,250 - __mp_main__ - INFO - Epoch 14, Loss 0.020036546513438225
+2024-04-19 14:40:37,251 - __mp_main__ - INFO - Epoch 14, Loss 0.013758589513599873
+2024-04-19 14:40:40,444 - __mp_main__ - INFO - Epoch 14, Loss 0.0012151689734309912
+2024-04-19 14:40:40,444 - __mp_main__ - INFO - Epoch 14, Loss 0.004031888209283352
+2024-04-19 14:40:40,444 - __mp_main__ - INFO - Epoch 14, Loss 0.19485998153686523
+2024-04-19 14:40:40,445 - __mp_main__ - INFO - Epoch 14, Loss 0.10379701107740402
+2024-04-19 14:40:41,508 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:41,508 - __mp_main__ - INFO - Rank 0: Time taken for epoch 14 is 7.3915722370147705
+2024-04-19 14:40:42,476 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9764
+2024-04-19 14:40:42,476 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:40:42,480 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:42,503 - __mp_main__ - INFO - Epoch 15, Loss 0.006002170965075493
+2024-04-19 14:40:42,504 - __mp_main__ - INFO - Epoch 15, Loss 0.23053397238254547
+2024-04-19 14:40:42,504 - __mp_main__ - INFO - Epoch 15, Loss 0.014073499478399754
+2024-04-19 14:40:42,504 - __mp_main__ - INFO - Epoch 15, Loss 0.0030529682990163565
+2024-04-19 14:40:45,684 - __mp_main__ - INFO - Epoch 15, Loss 0.1162562221288681
+2024-04-19 14:40:45,684 - __mp_main__ - INFO - Epoch 15, Loss 0.012870213016867638
+2024-04-19 14:40:45,684 - __mp_main__ - INFO - Epoch 15, Loss 0.11973517388105392
+2024-04-19 14:40:45,684 - __mp_main__ - INFO - Epoch 15, Loss 0.017951108515262604
+2024-04-19 14:40:48,775 - __mp_main__ - INFO - Epoch 15, Loss 0.10046260803937912
+2024-04-19 14:40:48,775 - __mp_main__ - INFO - Epoch 15, Loss 0.0011493514757603407
+2024-04-19 14:40:48,775 - __mp_main__ - INFO - Epoch 15, Loss 0.003944738302379847
+2024-04-19 14:40:48,775 - __mp_main__ - INFO - Epoch 15, Loss 0.19469735026359558
+2024-04-19 14:40:49,725 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:49,725 - __mp_main__ - INFO - Rank 0: Time taken for epoch 15 is 7.245155334472656
+2024-04-19 14:40:50,698 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.976
+2024-04-19 14:40:50,698 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:50,722 - __mp_main__ - INFO - Epoch 16, Loss 0.22207848727703094
+2024-04-19 14:40:50,722 - __mp_main__ - INFO - Epoch 16, Loss 0.005742981098592281
+2024-04-19 14:40:50,722 - __mp_main__ - INFO - Epoch 16, Loss 0.0030198039021342993
+2024-04-19 14:40:50,723 - __mp_main__ - INFO - Epoch 16, Loss 0.013792312704026699
+2024-04-19 14:40:53,513 - __mp_main__ - INFO - Epoch 16, Loss 0.012998722493648529
+2024-04-19 14:40:53,513 - __mp_main__ - INFO - Epoch 16, Loss 0.1203523501753807
+2024-04-19 14:40:53,513 - __mp_main__ - INFO - Epoch 16, Loss 0.1106242835521698
+2024-04-19 14:40:53,513 - __mp_main__ - INFO - Epoch 16, Loss 0.017031336203217506
+2024-04-19 14:40:56,639 - __mp_main__ - INFO - Epoch 16, Loss 0.004376568831503391
+2024-04-19 14:40:56,640 - __mp_main__ - INFO - Epoch 16, Loss 0.001069347490556538
+2024-04-19 14:40:56,640 - __mp_main__ - INFO - Epoch 16, Loss 0.09793893247842789
+2024-04-19 14:40:56,640 - __mp_main__ - INFO - Epoch 16, Loss 0.19406947493553162
+2024-04-19 14:40:57,671 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:40:57,672 - __mp_main__ - INFO - Rank 0: Time taken for epoch 16 is 6.9733734130859375
+2024-04-19 14:40:58,637 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9764
+2024-04-19 14:40:58,637 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:40:58,659 - __mp_main__ - INFO - Epoch 17, Loss 0.0055495817214250565
+2024-04-19 14:40:58,659 - __mp_main__ - INFO - Epoch 17, Loss 0.0030359227675944567
+2024-04-19 14:40:58,659 - __mp_main__ - INFO - Epoch 17, Loss 0.21462738513946533
+2024-04-19 14:40:58,660 - __mp_main__ - INFO - Epoch 17, Loss 0.01305078063160181
+2024-04-19 14:41:01,939 - __mp_main__ - INFO - Epoch 17, Loss 0.012337161228060722
+2024-04-19 14:41:01,940 - __mp_main__ - INFO - Epoch 17, Loss 0.115438312292099
+2024-04-19 14:41:01,940 - __mp_main__ - INFO - Epoch 17, Loss 0.10529381036758423
+2024-04-19 14:41:01,940 - __mp_main__ - INFO - Epoch 17, Loss 0.015724962577223778
+2024-04-19 14:41:05,047 - __mp_main__ - INFO - Epoch 17, Loss 0.00446408661082387
+2024-04-19 14:41:05,047 - __mp_main__ - INFO - Epoch 17, Loss 0.09289530664682388
+2024-04-19 14:41:05,048 - __mp_main__ - INFO - Epoch 17, Loss 0.0011298811296001077
+2024-04-19 14:41:05,049 - __mp_main__ - INFO - Epoch 17, Loss 0.19361038506031036
+2024-04-19 14:41:05,890 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:41:05,890 - __mp_main__ - INFO - Rank 0: Time taken for epoch 17 is 7.253060817718506
+2024-04-19 14:41:06,861 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9762
+2024-04-19 14:41:06,861 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:06,883 - __mp_main__ - INFO - Epoch 18, Loss 0.20711098611354828
+2024-04-19 14:41:06,883 - __mp_main__ - INFO - Epoch 18, Loss 0.005481484346091747
+2024-04-19 14:41:06,883 - __mp_main__ - INFO - Epoch 18, Loss 0.01221365388482809
+2024-04-19 14:41:06,883 - __mp_main__ - INFO - Epoch 18, Loss 0.0029151819180697203
+2024-04-19 14:41:09,652 - __mp_main__ - INFO - Epoch 18, Loss 0.015020553953945637
+2024-04-19 14:41:09,652 - __mp_main__ - INFO - Epoch 18, Loss 0.012825990095734596
+2024-04-19 14:41:09,652 - __mp_main__ - INFO - Epoch 18, Loss 0.11136451363563538
+2024-04-19 14:41:09,653 - __mp_main__ - INFO - Epoch 18, Loss 0.10166513919830322
+2024-04-19 14:41:12,723 - __mp_main__ - INFO - Epoch 18, Loss 0.0889366865158081
+2024-04-19 14:41:12,723 - __mp_main__ - INFO - Epoch 18, Loss 0.004552260506898165
+2024-04-19 14:41:12,724 - __mp_main__ - INFO - Epoch 18, Loss 0.0011185602052137256
+2024-04-19 14:41:12,724 - __mp_main__ - INFO - Epoch 18, Loss 0.1922924667596817
+2024-04-19 14:41:13,761 - __mp_main__ - INFO - Rank 0: Learning rate [0.0001]
+2024-04-19 14:41:13,761 - __mp_main__ - INFO - Rank 0: Time taken for epoch 18 is 6.899550437927246
+2024-04-19 14:41:14,717 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9766
+2024-04-19 14:41:14,717 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:41:14,722 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:14,743 - __mp_main__ - INFO - Epoch 19, Loss 0.005051750224083662
+2024-04-19 14:41:14,743 - __mp_main__ - INFO - Epoch 19, Loss 0.002835751511156559
+2024-04-19 14:41:14,743 - __mp_main__ - INFO - Epoch 19, Loss 0.20170672237873077
+2024-04-19 14:41:14,744 - __mp_main__ - INFO - Epoch 19, Loss 0.011896698735654354
+2024-04-19 14:41:17,918 - __mp_main__ - INFO - Epoch 19, Loss 0.1102437749505043
+2024-04-19 14:41:17,918 - __mp_main__ - INFO - Epoch 19, Loss 0.013623343780636787
+2024-04-19 14:41:17,919 - __mp_main__ - INFO - Epoch 19, Loss 0.011892441660165787
+2024-04-19 14:41:17,919 - __mp_main__ - INFO - Epoch 19, Loss 0.0991569310426712
+2024-04-19 14:41:21,037 - __mp_main__ - INFO - Epoch 19, Loss 0.08999093621969223
+2024-04-19 14:41:21,038 - __mp_main__ - INFO - Epoch 19, Loss 0.001107637770473957
+2024-04-19 14:41:21,038 - __mp_main__ - INFO - Epoch 19, Loss 0.19435524940490723
+2024-04-19 14:41:21,038 - __mp_main__ - INFO - Epoch 19, Loss 0.00477209035307169
+2024-04-19 14:41:22,042 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:41:22,042 - __mp_main__ - INFO - Rank 0: Time taken for epoch 19 is 7.320160150527954
+2024-04-19 14:41:22,975 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9762
+2024-04-19 14:41:22,975 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:22,997 - __mp_main__ - INFO - Epoch 20, Loss 0.004814064130187035
+2024-04-19 14:41:22,997 - __mp_main__ - INFO - Epoch 20, Loss 0.19355763494968414
+2024-04-19 14:41:22,997 - __mp_main__ - INFO - Epoch 20, Loss 0.002880280138924718
+2024-04-19 14:41:22,998 - __mp_main__ - INFO - Epoch 20, Loss 0.011260773986577988
+2024-04-19 14:41:25,908 - __mp_main__ - INFO - Epoch 20, Loss 0.07158921658992767
+2024-04-19 14:41:25,908 - __mp_main__ - INFO - Epoch 20, Loss 0.026424651965498924
+2024-04-19 14:41:25,908 - __mp_main__ - INFO - Epoch 20, Loss 0.01777234487235546
+2024-04-19 14:41:25,909 - __mp_main__ - INFO - Epoch 20, Loss 0.09630780667066574
+2024-04-19 14:41:28,839 - __mp_main__ - INFO - Epoch 20, Loss 0.0024434858933091164
+2024-04-19 14:41:28,839 - __mp_main__ - INFO - Epoch 20, Loss 0.002882614964619279
+2024-04-19 14:41:28,839 - __mp_main__ - INFO - Epoch 20, Loss 0.06345179677009583
+2024-04-19 14:41:28,840 - __mp_main__ - INFO - Epoch 20, Loss 0.13040193915367126
+2024-04-19 14:41:29,872 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:41:29,872 - __mp_main__ - INFO - Rank 0: Time taken for epoch 20 is 6.89678168296814
+2024-04-19 14:41:30,828 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.98
+2024-04-19 14:41:30,828 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:41:30,832 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:30,860 - __mp_main__ - INFO - Epoch 21, Loss 0.00454270513728261
+2024-04-19 14:41:30,861 - __mp_main__ - INFO - Epoch 21, Loss 0.002661322243511677
+2024-04-19 14:41:30,861 - __mp_main__ - INFO - Epoch 21, Loss 0.19188648462295532
+2024-04-19 14:41:30,862 - __mp_main__ - INFO - Epoch 21, Loss 0.004996803123503923
+2024-04-19 14:41:33,321 - __mp_main__ - INFO - Epoch 21, Loss 0.09190797805786133
+2024-04-19 14:41:33,321 - __mp_main__ - INFO - Epoch 21, Loss 0.026813266798853874
+2024-04-19 14:41:33,321 - __mp_main__ - INFO - Epoch 21, Loss 0.07621973752975464
+2024-04-19 14:41:33,321 - __mp_main__ - INFO - Epoch 21, Loss 0.01630856841802597
+2024-04-19 14:41:36,484 - __mp_main__ - INFO - Epoch 21, Loss 0.0026929599698632956
+2024-04-19 14:41:36,484 - __mp_main__ - INFO - Epoch 21, Loss 0.002562411595135927
+2024-04-19 14:41:36,484 - __mp_main__ - INFO - Epoch 21, Loss 0.13191579282283783
+2024-04-19 14:41:36,485 - __mp_main__ - INFO - Epoch 21, Loss 0.06343529373407364
+2024-04-19 14:41:37,670 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:41:37,671 - __mp_main__ - INFO - Rank 0: Time taken for epoch 21 is 6.8384599685668945
+2024-04-19 14:41:38,635 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9798
+2024-04-19 14:41:38,635 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:38,665 - __mp_main__ - INFO - Epoch 22, Loss 0.005020152777433395
+2024-04-19 14:41:38,665 - __mp_main__ - INFO - Epoch 22, Loss 0.002774378750473261
+2024-04-19 14:41:38,665 - __mp_main__ - INFO - Epoch 22, Loss 0.19281642138957977
+2024-04-19 14:41:38,666 - __mp_main__ - INFO - Epoch 22, Loss 0.005126554518938065
+2024-04-19 14:41:41,217 - __mp_main__ - INFO - Epoch 22, Loss 0.09103615581989288
+2024-04-19 14:41:41,217 - __mp_main__ - INFO - Epoch 22, Loss 0.026615137234330177
+2024-04-19 14:41:41,217 - __mp_main__ - INFO - Epoch 22, Loss 0.07765589654445648
+2024-04-19 14:41:41,217 - __mp_main__ - INFO - Epoch 22, Loss 0.015568532980978489
+2024-04-19 14:41:43,661 - __mp_main__ - INFO - Epoch 22, Loss 0.06276018172502518
+2024-04-19 14:41:43,661 - __mp_main__ - INFO - Epoch 22, Loss 0.0024472319055348635
+2024-04-19 14:41:43,661 - __mp_main__ - INFO - Epoch 22, Loss 0.0028669897001236677
+2024-04-19 14:41:43,661 - __mp_main__ - INFO - Epoch 22, Loss 0.13263970613479614
+2024-04-19 14:41:44,440 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:41:44,440 - __mp_main__ - INFO - Rank 0: Time taken for epoch 22 is 5.805124759674072
+2024-04-19 14:41:45,391 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9804
+2024-04-19 14:41:45,391 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:41:45,396 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:45,426 - __mp_main__ - INFO - Epoch 23, Loss 0.005336838774383068
+2024-04-19 14:41:45,426 - __mp_main__ - INFO - Epoch 23, Loss 0.005179178901016712
+2024-04-19 14:41:45,426 - __mp_main__ - INFO - Epoch 23, Loss 0.1931525468826294
+2024-04-19 14:41:45,427 - __mp_main__ - INFO - Epoch 23, Loss 0.0028139916248619556
+2024-04-19 14:41:47,747 - __mp_main__ - INFO - Epoch 23, Loss 0.02584148570895195
+2024-04-19 14:41:47,747 - __mp_main__ - INFO - Epoch 23, Loss 0.01511757355183363
+2024-04-19 14:41:47,747 - __mp_main__ - INFO - Epoch 23, Loss 0.07783182710409164
+2024-04-19 14:41:47,747 - __mp_main__ - INFO - Epoch 23, Loss 0.09046361595392227
+2024-04-19 14:41:50,278 - __mp_main__ - INFO - Epoch 23, Loss 0.002399573801085353
+2024-04-19 14:41:50,278 - __mp_main__ - INFO - Epoch 23, Loss 0.13294292986392975
+2024-04-19 14:41:50,278 - __mp_main__ - INFO - Epoch 23, Loss 0.0029711457900702953
+2024-04-19 14:41:50,278 - __mp_main__ - INFO - Epoch 23, Loss 0.062054507434368134
+2024-04-19 14:41:51,100 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:41:51,100 - __mp_main__ - INFO - Rank 0: Time taken for epoch 23 is 5.704402208328247
+2024-04-19 14:41:52,051 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.98
+2024-04-19 14:41:52,051 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:52,083 - __mp_main__ - INFO - Epoch 24, Loss 0.002855813829228282
+2024-04-19 14:41:52,083 - __mp_main__ - INFO - Epoch 24, Loss 0.005293061025440693
+2024-04-19 14:41:52,084 - __mp_main__ - INFO - Epoch 24, Loss 0.19310517609119415
+2024-04-19 14:41:52,084 - __mp_main__ - INFO - Epoch 24, Loss 0.005482915788888931
+2024-04-19 14:41:54,626 - __mp_main__ - INFO - Epoch 24, Loss 0.08987187594175339
+2024-04-19 14:41:54,626 - __mp_main__ - INFO - Epoch 24, Loss 0.02524760738015175
+2024-04-19 14:41:54,626 - __mp_main__ - INFO - Epoch 24, Loss 0.07753753662109375
+2024-04-19 14:41:54,626 - __mp_main__ - INFO - Epoch 24, Loss 0.014827286824584007
+2024-04-19 14:41:57,716 - __mp_main__ - INFO - Epoch 24, Loss 0.002996360184624791
+2024-04-19 14:41:57,716 - __mp_main__ - INFO - Epoch 24, Loss 0.0024118146393448114
+2024-04-19 14:41:57,716 - __mp_main__ - INFO - Epoch 24, Loss 0.1330682933330536
+2024-04-19 14:41:57,717 - __mp_main__ - INFO - Epoch 24, Loss 0.06113956496119499
+2024-04-19 14:41:58,864 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:41:58,865 - __mp_main__ - INFO - Rank 0: Time taken for epoch 24 is 6.813257217407227
+2024-04-19 14:41:59,833 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.98
+2024-04-19 14:41:59,833 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:41:59,856 - __mp_main__ - INFO - Epoch 25, Loss 0.005408677272498608
+2024-04-19 14:41:59,856 - __mp_main__ - INFO - Epoch 25, Loss 0.19293707609176636
+2024-04-19 14:41:59,856 - __mp_main__ - INFO - Epoch 25, Loss 0.002886524423956871
+2024-04-19 14:41:59,857 - __mp_main__ - INFO - Epoch 25, Loss 0.005565145052969456
+2024-04-19 14:42:02,795 - __mp_main__ - INFO - Epoch 25, Loss 0.024663953110575676
+2024-04-19 14:42:02,795 - __mp_main__ - INFO - Epoch 25, Loss 0.07744580507278442
+2024-04-19 14:42:02,796 - __mp_main__ - INFO - Epoch 25, Loss 0.014574017375707626
+2024-04-19 14:42:02,796 - __mp_main__ - INFO - Epoch 25, Loss 0.08948110044002533
+2024-04-19 14:42:05,207 - __mp_main__ - INFO - Epoch 25, Loss 0.0024247446563094854
+2024-04-19 14:42:05,207 - __mp_main__ - INFO - Epoch 25, Loss 0.06007443368434906
+2024-04-19 14:42:05,207 - __mp_main__ - INFO - Epoch 25, Loss 0.0029660342261195183
+2024-04-19 14:42:05,208 - __mp_main__ - INFO - Epoch 25, Loss 0.13294856250286102
+2024-04-19 14:42:06,030 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:42:06,030 - __mp_main__ - INFO - Rank 0: Time taken for epoch 25 is 6.196872711181641
+2024-04-19 14:42:06,975 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9802
+2024-04-19 14:42:06,975 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:42:07,012 - __mp_main__ - INFO - Epoch 26, Loss 0.0028935696464031935
+2024-04-19 14:42:07,012 - __mp_main__ - INFO - Epoch 26, Loss 0.005624705925583839
+2024-04-19 14:42:07,012 - __mp_main__ - INFO - Epoch 26, Loss 0.005504293832927942
+2024-04-19 14:42:07,013 - __mp_main__ - INFO - Epoch 26, Loss 0.1928146928548813
+2024-04-19 14:42:09,307 - __mp_main__ - INFO - Epoch 26, Loss 0.07733338326215744
+2024-04-19 14:42:09,307 - __mp_main__ - INFO - Epoch 26, Loss 0.014414320699870586
+2024-04-19 14:42:09,307 - __mp_main__ - INFO - Epoch 26, Loss 0.02419053390622139
+2024-04-19 14:42:09,307 - __mp_main__ - INFO - Epoch 26, Loss 0.0890565738081932
+2024-04-19 14:42:11,732 - __mp_main__ - INFO - Epoch 26, Loss 0.002899297047406435
+2024-04-19 14:42:11,732 - __mp_main__ - INFO - Epoch 26, Loss 0.0024489262141287327
+2024-04-19 14:42:11,732 - __mp_main__ - INFO - Epoch 26, Loss 0.05927564948797226
+2024-04-19 14:42:11,733 - __mp_main__ - INFO - Epoch 26, Loss 0.13244950771331787
+2024-04-19 14:42:12,643 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:42:12,643 - __mp_main__ - INFO - Rank 0: Time taken for epoch 26 is 5.667742490768433
+2024-04-19 14:42:13,601 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9802
+2024-04-19 14:42:13,601 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:42:13,625 - __mp_main__ - INFO - Epoch 27, Loss 0.1922549307346344
+2024-04-19 14:42:13,625 - __mp_main__ - INFO - Epoch 27, Loss 0.002890581963583827
+2024-04-19 14:42:13,625 - __mp_main__ - INFO - Epoch 27, Loss 0.0055287969298660755
+2024-04-19 14:42:13,625 - __mp_main__ - INFO - Epoch 27, Loss 0.005695601459592581
+2024-04-19 14:42:16,027 - __mp_main__ - INFO - Epoch 27, Loss 0.0769987553358078
+2024-04-19 14:42:16,028 - __mp_main__ - INFO - Epoch 27, Loss 0.023780623450875282
+2024-04-19 14:42:16,028 - __mp_main__ - INFO - Epoch 27, Loss 0.014092661440372467
+2024-04-19 14:42:16,028 - __mp_main__ - INFO - Epoch 27, Loss 0.08872336894273758
+2024-04-19 14:42:18,507 - __mp_main__ - INFO - Epoch 27, Loss 0.0028823388274759054
+2024-04-19 14:42:18,507 - __mp_main__ - INFO - Epoch 27, Loss 0.05873342603445053
+2024-04-19 14:42:18,508 - __mp_main__ - INFO - Epoch 27, Loss 0.13224859535694122
+2024-04-19 14:42:18,508 - __mp_main__ - INFO - Epoch 27, Loss 0.0024742071982473135
+2024-04-19 14:42:19,437 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:42:19,437 - __mp_main__ - INFO - Rank 0: Time taken for epoch 27 is 5.835660457611084
+2024-04-19 14:42:20,400 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9802
+2024-04-19 14:42:20,400 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:42:20,429 - __mp_main__ - INFO - Epoch 28, Loss 0.002889906521886587
+2024-04-19 14:42:20,429 - __mp_main__ - INFO - Epoch 28, Loss 0.005574970040470362
+2024-04-19 14:42:20,429 - __mp_main__ - INFO - Epoch 28, Loss 0.005679052323102951
+2024-04-19 14:42:20,430 - __mp_main__ - INFO - Epoch 28, Loss 0.19154514372348785
+2024-04-19 14:42:22,982 - __mp_main__ - INFO - Epoch 28, Loss 0.023427575826644897
+2024-04-19 14:42:22,982 - __mp_main__ - INFO - Epoch 28, Loss 0.07641149312257767
+2024-04-19 14:42:22,982 - __mp_main__ - INFO - Epoch 28, Loss 0.08843999356031418
+2024-04-19 14:42:22,982 - __mp_main__ - INFO - Epoch 28, Loss 0.013917936943471432
+2024-04-19 14:42:25,500 - __mp_main__ - INFO - Epoch 28, Loss 0.00248296489007771
+2024-04-19 14:42:25,500 - __mp_main__ - INFO - Epoch 28, Loss 0.002823886927217245
+2024-04-19 14:42:25,500 - __mp_main__ - INFO - Epoch 28, Loss 0.13160769641399384
+2024-04-19 14:42:25,500 - __mp_main__ - INFO - Epoch 28, Loss 0.05819840729236603
+2024-04-19 14:42:26,362 - __mp_main__ - INFO - Rank 0: Learning rate [1e-05]
+2024-04-19 14:42:26,363 - __mp_main__ - INFO - Rank 0: Time taken for epoch 28 is 5.962769508361816
+2024-04-19 14:42:27,307 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9806
+2024-04-19 14:42:27,307 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:42:27,311 - __mp_main__ - INFO - Rank 0: train_loader size 235
+2024-04-19 14:42:27,333 - __mp_main__ - INFO - Epoch 29, Loss 0.002885617548599839
+2024-04-19 14:42:27,333 - __mp_main__ - INFO - Epoch 29, Loss 0.005618304945528507
+2024-04-19 14:42:27,333 - __mp_main__ - INFO - Epoch 29, Loss 0.19088779389858246
+2024-04-19 14:42:27,334 - __mp_main__ - INFO - Epoch 29, Loss 0.005728711374104023
+2024-04-19 14:42:29,843 - __mp_main__ - INFO - Epoch 29, Loss 0.08789930492639542
+2024-04-19 14:42:29,843 - __mp_main__ - INFO - Epoch 29, Loss 0.07600675523281097
+2024-04-19 14:42:29,843 - __mp_main__ - INFO - Epoch 29, Loss 0.02317906729876995
+2024-04-19 14:42:29,844 - __mp_main__ - INFO - Epoch 29, Loss 0.013758995570242405
+2024-04-19 14:42:32,418 - __mp_main__ - INFO - Epoch 29, Loss 0.05783150717616081
+2024-04-19 14:42:32,418 - __mp_main__ - INFO - Epoch 29, Loss 0.0024652902502566576
+2024-04-19 14:42:32,418 - __mp_main__ - INFO - Epoch 29, Loss 0.13134536147117615
+2024-04-19 14:42:32,418 - __mp_main__ - INFO - Epoch 29, Loss 0.002807011129334569
+2024-04-19 14:42:33,480 - __mp_main__ - INFO - Rank 0: Learning rate [1.0000000000000002e-06]
+2024-04-19 14:42:33,481 - __mp_main__ - INFO - Rank 0: Time taken for epoch 29 is 6.169531583786011
+2024-04-19 14:42:34,298 - __mp_main__ - INFO - Rank 2: Mean time per epoch 6.934924674034119
+2024-04-19 14:42:34,446 - __mp_main__ - INFO - Rank 3: Mean time per epoch 6.815567143758138
+2024-04-19 14:42:34,453 - __mp_main__ - INFO - Rank 1: Mean time per epoch 6.817359089851379
+2024-04-19 14:42:34,459 - __mp_main__ - INFO - Rank 0: Validation accuracy 0.9808
+2024-04-19 14:42:34,459 - __mp_main__ - INFO - Saving the model
+2024-04-19 14:42:34,464 - __mp_main__ - INFO - Rank 0: Mean time per epoch 6.815141757329305
+2024-04-19 14:42:37,253 - __main__ - INFO - Accuracy of the full rank model is 0.978
+2024-04-19 14:42:38,938 - __main__ - INFO - Cross entropy loss of the full rank model is 0.07783616257793081
+Time taken for training is 237.86551642417908
