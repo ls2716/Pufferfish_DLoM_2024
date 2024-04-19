@@ -1,14 +1,14 @@
-# Testing Pufferfish on the task of training MLP on MNIST dataset
+# Testing Pufferfish on the task of training FCN on MNIST dataset
 
 Author: Lukasz Sliwinski s1640204@ed.ac.uk
 
-As a part of assessment for Deep Learing on Manifolds module Spring 2024.
+As a part of the assessment for the Deep Learing on Manifolds module (Spring 2024).
 
 ### What has been done
 
-In this directory, I have implemented the [Pufferfish](https://proceedings.mlsys.org/paper_files/paper/2021/hash/94cb28874a503f34b3c4a41bddcea2bd-Abstract.html) algorithm on the task of training MLP on the MNIST dataset. Description of the files:
+In this directory, I have implemented the [Pufferfish](https://proceedings.mlsys.org/paper_files/paper/2021/hash/94cb28874a503f34b3c4a41bddcea2bd-Abstract.html) algorithm on the task of training a fully-connected network (FCN) on the MNIST dataset. Description of the files:
 
-- models.py - contains implementation of full rank mlp, low rank mlp together with implementation of a low rank layer, and the implementation of conversion from full rank network to low rank network. Below is a code that converts a single linear layer to a low rank layer
+- models.py - contains implementation of full rank FCN, low rank FCN together with implementation of a low rank layer, and the implementation of conversion from the full rank network to the low rank network. Below is a code that converts a single fully-connected linear layer to a low rank layer:
 
 ```python
 # Get the matrix
@@ -30,15 +30,15 @@ low_rank_net.hidden_layers[i].v_layer.bias.data[:] = \
     full_rank_net.hidden_layers[i].bias.data[:]
 ```
 
-- train_full_rank.py contains the training of vanilla network
+- train_full_rank.py contains the training of the full rank network
 - train_low_rank.py implements the Pufferfish training with hybrid networks and vanilla warm-up
   
-Because of the high number of hyperparameters, I have not done any experiments with the above files - they just show that I have done the work to implement main part of the algorithm.
+Because of the high number of hyperparameters, I have not done any experiments with the above files - they just show that I have done the work to implement the algorithm.
 
 - train_full_DDP.py implements DataDistributedParallel training of a full rank network
 - train_low_DDP.py implements DataDistributedParallel training of a low rank network
 
-Using above scripts, I have analysed whether Pufferfish indeed leads to time savings and what is the order of the loss due to direct training of a low rank network. A few results from experimentation with those scripts will be described in the following sections.
+Using above scripts, I have tested whether Pufferfish indeed leads to time savings and what is the order of the loss due to direct training of a low rank network. A few results from experimentation with those scripts will be described in the following sections.
 
 - data folder is for data (empty in this repo)
 - models folder holds models (empty in this repo)
@@ -46,11 +46,11 @@ Using above scripts, I have analysed whether Pufferfish indeed leads to time sav
 
 Other files are auxilary.
 
-## DDP training
+## Data-Distributed Parallel (DDP) training
 
 The DDP training was executed on MAC-MIGS GPU cluster which provides 4 x T600 NVIDIA GPUs. All runs used all 4 gpus.
 
-## Time savings and accuracy for small model
+## Time savings and accuracy for a small model
 
 The small full rank model was:
 ```bash
@@ -63,7 +63,7 @@ The small full rank model was:
 )
 ```
 
-That is apart from input dimension with 28x28 and output dimension 10, hidden_dimension was 128. There were 4 hidden layers.
+That is apart from input dimension with 28x28 and output dimension 10, hidden_dimension was 128. There were 4 hidden fully-connected linear layers.
 
 The corresponding low rank model was:
 ```bash
@@ -78,7 +78,7 @@ The corresponding low rank model was:
   (output_layer): Linear(in_features=128, out_features=10, bias=True)
 )
 ```
-Only the inner linear layers were rendered low rank and the low rank dimenion was 16.
+Only the hidden linear layers were decomposed into low rank layers and the low rank dimenion was 16.
 
 #### Number of parameters
 
@@ -90,7 +90,7 @@ The models were trained for 30 epochs using Adam optimiser and learning rate 0.0
 
 #### Final accuracy and mean epoch time
 
-Accuracy:
+Test accuracy:
 
 - full rank model: 0.978
 - low rank model: 0.9727
@@ -104,7 +104,7 @@ The mean times were computed across three runs.
 
 We can see that mean time per epoch was almost the same for both models.
 
-## Time savings and accuracy for large model
+## Time savings and accuracy for a large model
 
 The large full rank model was:
 ```bash
@@ -132,7 +132,7 @@ The corresponding low rank model was:
   (output_layer): Linear(in_features=512, out_features=10, bias=True)
 )
 ```
-Only the inner linear layers were rendered low rank and the low rank dimenion was 64.
+Only the inner linear layers were decomposed into low rank layers and the low rank dimenion was 64.
 
 #### Number of parameters
 
@@ -140,9 +140,9 @@ The full rank model had 2508298 parameters while the low rank model had 935434 p
 
 #### Training
 
-The models were trained for 3 epochs using Adam optimiser and learning rate 0.001 reduced 10 times every 10 epochs. 
+The models were trained for 3 epochs using Adam optimiser.
 
-Naturally, the models were not fully trained. The purpose of the experiments was to calculate and compare the mean time per epoch.
+Naturally, the output models were not fully trained. The purpose of the experiments was to calculate and compare the mean time per epoch.
 
 #### Mean epoch time
   
@@ -163,7 +163,7 @@ In the case of the small model, although the low rank network had 30\% less para
 
 In the case of the large model, the low rank network has over 60\% less parameters than the full rank network. Consequently, this results in reduction of mean time per epoch by around 30\%.
 
-We can thus conclude that low-rank decomposition of linear layers does not always lead to a decrease in the training time of the network. Only when the relative difference in the number of parameters between the full rank and the low rank model is large, it is possible to obtain positive reduction in computation time.
+We can thus conclude that low-rank decomposition of linear layers does not always lead to a decrease in the training time of the network. Only when the relative difference in the number of parameters between the full rank and the low rank models is large, it is possible to obtain positive reduction in computation time.
 
 #### Other considerations
 
@@ -171,7 +171,7 @@ As mentioned in the executive summary, in addition to the problem above, we are 
 
 Furthermore, the low rank representation does poorly in terms of decreasing the total number of operations which is an important performance metric as it determines the inference efficiency of the model.
 
-All of above makes the application of direct low rank training and thus Pufferfish a complicated task.
+All of above makes the application of direct low rank training, and thus the Pufferfish algorithm, a complicated task.
 
 ##### Addendum
 

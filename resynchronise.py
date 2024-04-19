@@ -1,4 +1,5 @@
-"""Take a file or folder as an argument and get it using scp to a destination
+"""Take a file or folder as an argument and get it using scp 
+from the remote sourcer to the local destination.
 """
 
 import os

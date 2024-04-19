@@ -9,7 +9,6 @@ import time
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-# Import the data distribured parallel module from torch
 from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.distributed as dist
 import torch.multiprocessing as mp
@@ -52,6 +51,7 @@ HIDDEN_SIZE = 512
 
 
 def compute_accuracy(net, val_loader, rank):
+    """Compute the accuracy of the model on the validation set."""
     net.eval()
     correct = 0
     total = 0
@@ -121,6 +121,7 @@ def cleanup():
 
 
 def prepare(rank, world_size, train_dataset, batch_size=64, pin_memory=False, num_workers=0):
+    """Prepare the data loader for training."""
 
     sampler = DistributedSampler(
         train_dataset, num_replicas=world_size, rank=rank, shuffle=False, drop_last=False)
